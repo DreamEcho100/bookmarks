@@ -62,3 +62,33 @@ Config errors will appear in the log output and can be accessed in the usual way
 _Note_: It is possible to render your machine unusable with a bad config file. Should you find yourself in this position, the special key sequence backspace+escape+enter should cause keyd to terminate.
 
 Some mice (e.g the Logitech MX Master) are capable of emitting keys and are consequently matched by the wildcard id. It may be necessary to explicitly blacklist these.
+
+## Vim motion
+
+`h` --- Left
+`j` --- Down
+`k` --- Up
+`l` --- Right
+
+`u` --- undo
+`ctrl+r` --- redo
+
+`i` --- Insert mode, before cursor
+`I` --- Insert mode, at the start of the line of the cursor
+`a` --- Insert mode, after cursor _(think of appending)_
+`A` --- Insert mode, at the end of the line of the cursor
+`o` --- Insert mode, making a new line after the line that has the cursor
+`O` --- Insert mode, making a new line after the line that has the cursor
+
+`dd` --- delete line
+`di{` --- delete what's inside the `{}` currently in _(think of delete inner)_
+`ci(` --- delete what's inside the `()` currently in
+
+`yy`|`Y` -- copy line
+
+`p` --- pasting what's yanked or in the buffer _(like for example when deleting)_
+
+
+In Visiual mode _(entered by pressing `v` on normal/command mode)_
+`y` --- copy selection _(yanking/copyng)_
+`d` --- delete selction
