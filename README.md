@@ -65,13 +65,25 @@ Some mice (e.g the Logitech MX Master) are capable of emitting keys and are cons
 
 ## Vim motion
 
+**nav**:
+
 `h` --- Left
 `j` --- Down
 `k` --- Up
 `l` --- Right
+`gg` --- Go to the start of the page
+`G` --- Go to the end of the page
+`$` --- Go to the end of the line
+`^`|`0` --- Go to the start of the line
+`{` --- Go to the new line before a block of paragraph
+`}` --- Go to the new line after a block of paragraph
+`w` --- Move forword by word
+`W` --- Move forword by word seperated by whitespace
+`b` --- Move backword by word
+`B` --- Move backword by word seperated by whitespace
 
 `u` --- undo
-`ctrl+r` --- redo
+`ctrl`+`r` --- redo
 
 `i` --- Insert mode, before cursor
 `I` --- Insert mode, at the start of the line of the cursor
@@ -81,14 +93,32 @@ Some mice (e.g the Logitech MX Master) are capable of emitting keys and are cons
 `O` --- Insert mode, making a new line after the line that has the cursor
 
 `dd` --- delete line
-`di{` --- delete what's inside the `{}` currently in _(think of delete inner)_
-`ci(` --- delete what's inside the `()` currently in
+`di`+**specific character**_(like `{` or `(`)_  --- delete what's inside the **apecific character** currently in _(think of delete inner)_
+`dit` --- deletes what's between:W
+ `>` and `<`
+`dat` --- deletes the xml/html like tag with it's content 
+`D`|`d}` --- Deletes the rest of the line after the cursor
+`df`+character --- Delete until **after** the character
+`dt`+character --- Delete until **before** the character
+`d`+**nav** commands ---
+
+Note: `d` and `c` will delete but the differnce is that `c` will inter the **Insert Mode** _(think about deleting vs changing)_
 
 `yy`|`Y` -- copy line
 
-`p` --- pasting what's yanked or in the buffer _(like for example when deleting)_
+`p` --- pasting what's yanked or in the buffer _(like for example when deleting)_ after the cursor
+`P` --- pasting what's yanked or in the buffer _(like for example when deleting)_ before the cursor
 
 
 In Visiual mode _(entered by pressing `v` on normal/command mode)_
 `y` --- copy selection _(yanking/copyng)_
 `d` --- delete selction
+
+`r` --- replace the charachter without going to the insert mode
+
+`f`+character --- Search forward for the character
+`F`+character --- Search backward for the character
+
+`/`+search term --- To navigate use `n` backward and  `N` to navigate forward
+`#` --- will search the **word** the cursor on backward
+`*` --- will search the **word** the cursor on forward
